@@ -21,4 +21,10 @@ public class UploadController {
     public List<Map<String, String>> upload(@RequestParam("file") MultipartFile file) throws Exception{
        return uploadService.upload(file);
     }
+    
+     @PostMapping("/upload1")
+    public void upload1(@RequestParam("file") MultipartFile file) throws Exception{
+        uploadService.upload1(file);
+       //return uploadService.upload1(file);
+    }
 }
